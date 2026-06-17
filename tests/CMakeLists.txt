@@ -11,7 +11,7 @@ endif()
 
 # Load CMake Packages
 find_package(Check REQUIRED)
-set(LIBS ${CHECK_LIBRARIES} ${open62541_LIBRARIES})
+set(LIBS ${CHECK_LIBRARIES} ${open62541_LIBRARIES} ${open62541_PUBLIC_LIBRARIES})
 if(NOT WIN32 AND NOT APPLE AND NOT (CMAKE_HOST_SYSTEM_NAME MATCHES "OpenBSD"))
     list(APPEND LIBS subunit)
 endif()
